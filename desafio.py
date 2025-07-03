@@ -1,3 +1,4 @@
+
 '''
 Desafio: Gerenciador de Pessoas Aprimorado
 Objetivo: Adicionar novas funcionalidades ao seu sistema de cadastro para torná-lo mais completo e interativo.
@@ -98,7 +99,44 @@ while True:
                     break
                     
         case 4:
-            pass
+            remove = input('Pesquise o nome que deseja remove do sistema: ')
+            removeM = remove.lower()
+            achado_remove = []
+
+            for indice, p in enumerate(dados):
+
+
+                if p['nome'] in removeM:
+                    achado_remove.append(indice)
+            if achado_remove:
+                print('Nomes encontrados: ')
+                for p in achado_remove:
+                    print(f'-Indice: {indice}')
+                    try:
+                        indice2 = int(input('Confirme qual o indice do nome da pessoa que deseja remover: '))
+                        del dados[indice2]
+                        print(dados)
+                    except ValueError:
+                        print('Digito errado, Por favor, digite aapenas números. ')
+                        continue
+                novo_remove = input('Deseja remover algum outro nome do sistema? S/N')
+                novo_removeM = novo_remove.lower
+
+                if novo_removeM == 'S'.lower():
+                    continue
+                else:
+                    break
+            else:
+                print(f'Nenhum nome encontrado com {remove}')
+                break
+                   
+
+
+            
+
+           
+
+
             
         case 5:
             print('Saindo do Programa. Até mais!')
