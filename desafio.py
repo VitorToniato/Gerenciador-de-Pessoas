@@ -37,6 +37,7 @@ while True:
         continue
 
     match escolha:
+
         case 1:
             nome = input('Digite um nome: ')
             try:
@@ -51,6 +52,7 @@ while True:
             dados.append({'nome': nome, 'idade': idade})
             print('Pessoas cadastrada !\n')
 
+        # verificações e ações
         case 2:
             if not dados:
                 print('Nenhuma pessoa cadastrada ainda.\n')
@@ -61,7 +63,7 @@ while True:
             for p in dados:
                 soma_idade += p['idade']
                 if p['idade'] >= 18:
-                    maiores_idade.append(f'{p['nome']} tem {p['idade']} anos')
+                    maiores_idade.append(f'{p['nome']} tem {p['idade']} anos\n')
             media = soma_idade / len(dados)
 
 
@@ -74,6 +76,8 @@ while True:
                 print(f'Não há pessoas maiores de 18 anos cadastradas.')
             print()
 
+
+        # pesquisa de nomes.
         case 3:
             while True:
                 pesquisa = input('Digite o nome que deseja pesquisa: ')
@@ -97,21 +101,29 @@ while True:
                 else:
                     print(f'Nenhum nome encontrado com {pesquisaM}')
                     break
-                    
+
+        # opção de remover um nome.           
         case 4:
             remove = input('Pesquise o nome que deseja remove do sistema: ')
             removeM = remove.lower()
-            achado_remove = []
+            achado_remove = [] # indice_remove
+            copy_achado = [] # achados
 
             for indice, p in enumerate(dados):
+                achado_remove.append(indice)
+                achado_remove.append(p)
 
-
-                if p['nome'] in removeM:
-                    achado_remove.append(indice)
-            if achado_remove:
+                if removeM in p['nome']:
+                    copy_achado.append(p)
+            if copy_achado:
                 print('Nomes encontrados: ')
-                for p in achado_remove:
-                    print(f'-Indice: {indice}')
+
+                # list compreend
+
+                for copy_achado in achado_remove:
+                    print(f'-Indices e Nomes: {achado_remove}')
+                    print()
+                    print()
                     try:
                         indice2 = int(input('Confirme qual o indice do nome da pessoa que deseja remover: '))
                         del dados[indice2]
@@ -129,18 +141,8 @@ while True:
             else:
                 print(f'Nenhum nome encontrado com {remove}')
                 break
-                   
 
-
-            
-
-           
-
-
-            
+        # opção de sair do programa.      
         case 5:
             print('Saindo do Programa. Até mais!')
             break
-
-        case _:
-            print('Opção inválida. Por favor. escolha 1, 2 ou 3.\n')
