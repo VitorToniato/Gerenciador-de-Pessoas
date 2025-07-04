@@ -104,44 +104,53 @@ while True:
 
         # opção de remover um nome.           
         case 4:
-            remove = input('Pesquise o nome que deseja remove do sistema: ')
-            removeM = remove.lower()
-            achado_remove = [] # indice_remove
-            copy_achado = [] # achados
+            nome_remove = input('Digite o nome que deseja remover do Sistema: ')
+            achados = []
 
             for indice, p in enumerate(dados):
-                achado_remove.append(indice)
-                achado_remove.append(p)
+                if 'nome' in  p:
 
-                if removeM in p['nome']:
-                    copy_achado.append(p)
-            if copy_achado:
+                    if nome_remove.lower() in p['nome'].lower():
+                        achados.append((indice, p))
+            
+            if achados:
                 print('Nomes encontrados: ')
+                for i, (indice, nome_achado) in enumerate(achados):
+                   print(f'[{i}] - Índice: {indice} | Nome: {p['nome']} | Idade: {p['idade']}')
 
-                # list compreend
+                try:
+                    verificacao = int(input('Digite o indice do nome que deseja remover: '))
+                    if 0 <= verificacao < len(achados):
+                        id_real = achados[verificacao][0]
+                        p_real = achados[verificacao][1]
+                        confirmacao = input(f'Tem certeza que deseja remover "{p_real['nome']}"(Indice Originnal: {id_real})? (S/N): ').lower()
+                        if confirmacao == 's':
+                            del dados[id_real]
+                            print(f'Nome: {p_real['nome']} removido com sucesso!')
+                        else:
+                            print('Remoção cancelada.')
+                    else:
+                        print('Número inválido. Por favor, digite um número que esteja na lista dos itens encontrados.')
 
-                for copy_achado in achado_remove:
-                    print(f'-Indices e Nomes: {achado_remove}')
-                    print()
-                    print()
-                    try:
-                        indice2 = int(input('Confirme qual o indice do nome da pessoa que deseja remover: '))
-                        del dados[indice2]
-                        print(dados)
-                    except ValueError:
-                        print('Digito errado, Por favor, digite aapenas números. ')
-                        continue
-                novo_remove = input('Deseja remover algum outro nome do sistema? S/N')
-                novo_removeM = novo_remove.lower
-
-                if novo_removeM == 'S'.lower():
+                except ValueError:
+                    print('Error de digitação, digite apenas números, por favor!')
                     continue
+                except IndexError:
+                    print('Número inválido. Por favor, digite um número que esteja na lista dos itens encontrados.')
+                    continue
+                novo_remove_resposta = input('Deseja remover algum outro nome do sistema? (S/N): ').lower().strip()
+                if novo_remove_resposta == 's':
+                    continue # Sai do loop interno e continua o loop principal (volta para 'Digite o nome...')
+                elif novo_remove_resposta == 'n':
+                    break # Sai do loop interno
                 else:
-                    break
-            else:
-                print(f'Nenhum nome encontrado com {remove}')
-                break
+                    print("Resposta inválida. Por favor, digite 'S' para sim ou 'N' para não.")
 
+            else:
+                print(f'Nenhum nome encontrado com {nome_remove}')
+                break
+                
+            
         # opção de sair do programa.      
         case 5:
             print('Saindo do Programa. Até mais!')
