@@ -63,15 +63,15 @@ while True:
             for p in dados:
                 soma_idade += p['idade']
                 if p['idade'] >= 18:
-                    maiores_idade.append(f'{p['nome']} tem {p['idade']} anos\n')
-            media = soma_idade / len(dados)
+                    maiores_idade.append(f'\n{p['nome']} tem {p['idade']} anos')
+            media = soma_idade / len(dados) 
 
 
-            print(f'{len(dados)} foram cadastradas ao sistema.')
+            print(f'{len(dados)} pessoas foram cadastradas ao sistema.')
             print(f'A média de idade é de {media:.2f}')
 
             if maiores_idade:
-                print(f'Pessoas maiores de 18 anos: { ', '. join(maiores_idade)}')
+                print(f'Pessoas maiores de 18 anos: { ' '. join(maiores_idade)}')
             else:
                 print(f'Não há pessoas maiores de 18 anos cadastradas.')
             print()
@@ -92,7 +92,7 @@ while True:
                 if achados:
                     print('Nomes encontrados:')
                     for p in achados:
-                        print(f'- Nome: {p['nome']},{p['idade']}')
+                        print(f'- Nome: {p['nome']}, Idade: {p['idade']} anos.')
                     nova_pesq = input('Deseja fazer uma nova pesquisa? S/N')
                     if nova_pesq.lower() == 'S'.lower():
                         continue
@@ -116,17 +116,19 @@ while True:
             if achados:
                 print('Nomes encontrados: ')
                 for i, (indice, nome_achado) in enumerate(achados):
-                   print(f'[{i}] - Índice: {indice} | Nome: {p['nome']} | Idade: {p['idade']}')
+                   print(f'[{i}] - Índice: {indice} | Nome: {nome_achado['nome']} | Idade: {nome_achado['idade']}')
 
                 try:
                     verificacao = int(input('Digite o indice do nome que deseja remover: '))
                     if 0 <= verificacao < len(achados):
                         id_real = achados[verificacao][0]
                         p_real = achados[verificacao][1]
+
                         confirmacao = input(f'Tem certeza que deseja remover "{p_real['nome']}"(Indice Originnal: {id_real})? (S/N): ').lower()
                         if confirmacao == 's':
                             del dados[id_real]
                             print(f'Nome: {p_real['nome']} removido com sucesso!')
+                            print(dados) 
                         else:
                             print('Remoção cancelada.')
                     else:
