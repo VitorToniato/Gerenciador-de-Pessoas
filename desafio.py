@@ -71,7 +71,7 @@ while True:
             print(f'A média de idade é de {media:.2f}')
 
             if maiores_idade:
-                print(f'Pessoas maiores de 18 anos: { ', '. join(maiores_idade)}')
+                print(f'Pessoas maiores de 18 anos:\n { ', '. join(maiores_idade)}')
             else:
                 print(f'Não há pessoas maiores de 18 anos cadastradas.')
             print()
