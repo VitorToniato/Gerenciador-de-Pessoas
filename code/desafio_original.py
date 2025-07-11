@@ -60,7 +60,7 @@ while True:
             else:
                 print(f'Não há pessoas maiores de 18 anos cadastradas.')
             print()
-
+    
 
         # pesquisa de nomes.
         case 3:
