@@ -47,14 +47,13 @@ Execute o script Python com o comando:
 
 Bash
 
-python seu_arquivo.py
-(Substitua seu_arquivo.py pelo nome real do seu arquivo Python).
+python code/modificacoes.py
 
 O menu do sistema será exibido, e você poderá interagir com ele seguindo as instruções.
 
 📂 Estrutura do Projeto
 
-seu_arquivo.py: O arquivo principal do sistema, contendo todas as funções e a lógica do programa.
+code/modificacoes.py: O arquivo principal do sistema, contendo todas as funções e a lógica do programa.
 
 Dados/: Diretório criado automaticamente pelo sistema para armazenar o arquivo dados.json.
 
@@ -78,21 +77,9 @@ Este projeto é de código aberto e está disponível sob a Licença MIT.
 
 Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
 
-[Seu Nome/GitHub Username]
+https://github.com/VitorToniato
 
-[vitortoniato14@gmail.com]
-
-Observações:
-Substitua seu_arquivo.py pelo nome real do seu arquivo Python (provavelmente main.py ou gerenciador_pessoas.py).
-
-Preencha [Seu Nome/GitHub Username] e [Seu Email (opcional)] com suas informações.
-
-Se você quiser, pode criar um arquivo LICENSE no seu repositório com o texto completo da Licença MIT.
-
-Este README.md já inclui as últimas melhorias que discutimos, como a criação automática da pasta Dados e a estrutura de persistência.
+vitortoniato14@gmail.com
 
 Autor
 @https://github.com/VitorToniato
-
-Licença
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes. 
