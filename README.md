@@ -1,7 +1,9 @@
 🚀 Gerenciador de Pessoas em Python
+
 Um sistema simples e funcional para cadastro, gerenciamento e persistência de dados de pessoas, desenvolvido em Python. Este projeto demonstra conceitos essenciais de manipulação de arquivos JSON, tratamento de erros e modularização de código.
 
 ✨ Funcionalidades
+
 O sistema oferece as seguintes opções através de um menu interativo:
 
 Cadastrar Pessoa: Adiciona novas pessoas ao sistema com nome e idade.
@@ -19,6 +21,7 @@ Carregar Arquivos: Carrega dados de um arquivo JSON existente para a memória do
 Salvar e Sair: Salva as alterações e encerra o programa.
 
 🛠️ Tecnologias Utilizadas
+
 Python 3: Linguagem de programação principal.
 
 Módulo json: Utilizado para serialização e desserialização de dados em formato JSON, garantindo a persistência.
@@ -26,6 +29,7 @@ Módulo json: Utilizado para serialização e desserialização de dados em form
 Módulo os: Utilizado para manipulação de diretórios (criação da pasta Dados).
 
 🚀 Como Usar
+
 Siga os passos abaixo para rodar o Gerenciador de Pessoas em sua máquina local:
 
 Pré-requisitos
@@ -49,6 +53,7 @@ python seu_arquivo.py
 O menu do sistema será exibido, e você poderá interagir com ele seguindo as instruções.
 
 📂 Estrutura do Projeto
+
 seu_arquivo.py: O arquivo principal do sistema, contendo todas as funções e a lógica do programa.
 
 Dados/: Diretório criado automaticamente pelo sistema para armazenar o arquivo dados.json.
@@ -56,6 +61,7 @@ Dados/: Diretório criado automaticamente pelo sistema para armazenar o arquivo 
 Dados/dados.json: Arquivo onde todas as informações das pessoas cadastradas são salvas e carregadas.
 
 🤝 Contribuição
+
 Este projeto é um exemplo de um sistema básico de gerenciamento de dados. Sinta-se à vontade para:
 
 Explorar o código: Entender como as funcionalidades foram implementadas.
@@ -65,14 +71,16 @@ Melhorar: Adicionar novas funcionalidades (como filtragem, ordenação, exporta�
 Reportar problemas: Caso encontre algum bug ou comportamento inesperado.
 
 📄 Licença
+
 Este projeto é de código aberto e está disponível sob a Licença MIT.
 
 📧 Contato
+
 Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
 
 [Seu Nome/GitHub Username]
 
-[Seu Email (opcional)]
+[vitortoniato14@gmail.com]
 
 Observações:
 Substitua seu_arquivo.py pelo nome real do seu arquivo Python (provavelmente main.py ou gerenciador_pessoas.py).
