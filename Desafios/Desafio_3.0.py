@@ -33,5 +33,4 @@ Por que é interessante: Garante que suas funções se comportem como esperado e
 
 Esses são apenas caminhos que você pode seguir para continuar aprendendo e aprimorando. Sinta-se à vontade para escolher um, vários, ou simplesmente considerar seu projeto como concluído neste ponto.
 
-O que achou dessas ideias? Tem alguma que te interessa mais para um próximo desafio?
 '''
