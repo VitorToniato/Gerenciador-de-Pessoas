@@ -20,7 +20,7 @@ def menu():
 caminho_arquivo = 'Dados/dados.json'
 diretorio_dados = os.path.dirname(caminho_arquivo)
 if not os.path.exists(diretorio_dados):
-    os.makefirs(diretorio_dados)
+    os.makedirs(diretorio_dados)
 
 try:
     with open(caminho_arquivo, 'r') as f:
@@ -35,7 +35,7 @@ def escolha():
     while True:
         menu()
         try:
-            escolha = int(input('Escolha qual opção você quer: ')).strip()
+            escolha = int(input('Escolha qual opção você quer: '))
         except ValueError:
             print('Entrada Inválida, digite um números.')
             continue
