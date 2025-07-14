@@ -47,13 +47,13 @@ Execute o script Python com o comando:
 
 Bash
 
-python code/modificacoes.py
+python Code/modificacoes.py
 
 O menu do sistema será exibido, e você poderá interagir com ele seguindo as instruções.
 
 📂 Estrutura do Projeto
 
-code/modificacoes.py: O arquivo principal do sistema, contendo todas as funções e a lógica do programa.
+Code/modificacoes.py: O arquivo principal do sistema, contendo todas as funções e a lógica do programa.
 
 Dados/: Diretório criado automaticamente pelo sistema para armazenar o arquivo dados.json.
 
