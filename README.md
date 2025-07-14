@@ -1,95 +1,87 @@
-# Gerenciador-de-Pessoas-
+🚀 Gerenciador de Pessoas em Python
+Um sistema simples e funcional para cadastro, gerenciamento e persistência de dados de pessoas, desenvolvido em Python. Este projeto demonstra conceitos essenciais de manipulação de arquivos JSON, tratamento de erros e modularização de código.
 
-Gerenciador de Pessoas Aprimorado
+✨ Funcionalidades
+O sistema oferece as seguintes opções através de um menu interativo:
 
-Descrição do Projeto
-Este é um sistema simples, mas robusto, para o gerenciamento de informações de pessoas, desenvolvido em Python. Ele permite aos usuários cadastrar novas pessoas com nome e idade, visualizar estatísticas sobre os cadastros (como número total de pessoas e média de idade, além de listar maiores de 18 anos), buscar pessoas por parte do nome e remover registros específicos. O sistema é operado via console, oferecendo uma interface de menu interativa e intuitiva.
-Gerienciador de Pessoas feito em Linguagem Python
+Cadastrar Pessoa: Adiciona novas pessoas ao sistema com nome e idade.
 
-Arquivo 'desafio_original.py' é o meu código original.
+Verificações: Exibe o total de pessoas cadastradas, a média de idade e lista as pessoas maiores de 18 anos.
 
-Arquivo 'desafio.2.0_para_comparação.py' é o código com melhorias onde pedi para a ia Gemini do Google para corrigir, já que ele que me passo esse desafio. E também pedi para ele me passar como tava a minha lógica e meu pontos positivos e negativos. Logo em seguida pedidi para me passar alguns pontos de melhorias e feedbacks para melhorar meu código e as melhorias estão contidas nesse arquivo.
+Buscar Pessoas: Permite pesquisar pessoas por nome (busca parcial).
 
-O projeto foi desenvolvido como um desafio de programação para aprimorar habilidades em manipulação de listas, dicionários, tratamento de erros e lógica de controle de fluxo (while, for, match case).
+Remover Pessoas: Remove pessoas do sistema com base no nome pesquisado, oferecendo uma lista de opções para remoção.
 
-Funcionalidades
-O sistema oferece as seguintes opções principais no menu:
+Salvar Arquivos: Salva o estado atual dos dados em um arquivo JSON.
 
-[1] Cadastrar Pessoa: Permite adicionar um novo registro com nome e idade. Inclui validação para garantir que a idade seja um número positivo.
+Carregar Arquivos: Carrega dados de um arquivo JSON existente para a memória do sistema, substituindo os dados atuais.
 
-[2] Verificações: Exibe estatísticas sobre as pessoas cadastradas, incluindo:
+Salvar e Sair: Salva as alterações e encerra o programa.
 
-O número total de pessoas no sistema.
+🛠️ Tecnologias Utilizadas
+Python 3: Linguagem de programação principal.
 
-A média de idade das pessoas cadastradas.
+Módulo json: Utilizado para serialização e desserialização de dados em formato JSON, garantindo a persistência.
 
-Uma lista de todas as pessoas maiores de 18 anos.
+Módulo os: Utilizado para manipulação de diretórios (criação da pasta Dados).
 
-[3] Buscar Pessoa: Permite pesquisar pessoas por parte do nome (busca "case-insensitive", ou seja, não diferencia maiúsculas de minúsculas). Exibe todos os resultados encontrados e oferece a opção de realizar novas buscas.
+🚀 Como Usar
+Siga os passos abaixo para rodar o Gerenciador de Pessoas em sua máquina local:
 
-[4] Remover Pessoa: Permite remover um ou mais registros de pessoas com base no nome. O sistema lista todas as ocorrências de um nome pesquisado, permitindo ao usuário escolher qual registro remover através de um índice, e solicita confirmação antes da remoção definitiva.
+Pré-requisitos
+Certifique-se de ter o Python 3 instalado em seu sistema. Você pode baixá-lo em python.org.
 
-[5] Sair do Sistema: Encerra a execução do programa.
+Instalação
+Não há pacotes adicionais para instalar além do Python padrão.
 
-Tecnologias Utilizadas
-Linguagem: Python 3.x
+Execução
+Clone o repositório (se estiver no GitHub) ou baixe o arquivo main.py (ou o nome que você deu ao seu arquivo principal) para o seu computador.
 
-Como Rodar o Projeto
-Para executar este sistema em sua máquina, siga os passos abaixo:
+Abra o terminal ou prompt de comando na pasta onde você salvou o arquivo.
 
-Pré-requisitos: Certifique-se de ter o Python 3.x instalado em seu computador. Você pode baixá-lo em python.org.
-
-Baixar o Código:
-
-Você pode clonar este repositório usando Git:
+Execute o script Python com o comando:
 
 Bash
 
-git clone <https://github.com/VitorToniato/Gerenciador-de-Pessoas-.git>
-Ou baixar o arquivo gerenciador_pessoas.py (ou o nome que você deu ao seu arquivo principal) diretamente.
+python seu_arquivo.py
+(Substitua seu_arquivo.py pelo nome real do seu arquivo Python).
 
-Executar o Programa:
+O menu do sistema será exibido, e você poderá interagir com ele seguindo as instruções.
 
-Abra o terminal (ou Prompt de Comando/PowerShell no Windows, Terminal no Linux/macOS).
+📂 Estrutura do Projeto
+seu_arquivo.py: O arquivo principal do sistema, contendo todas as funções e a lógica do programa.
 
-Navegue até o diretório onde você salvou o arquivo do projeto.
+Dados/: Diretório criado automaticamente pelo sistema para armazenar o arquivo dados.json.
 
-Execute o comando:
+Dados/dados.json: Arquivo onde todas as informações das pessoas cadastradas são salvas e carregadas.
 
-Bash
+🤝 Contribuição
+Este projeto é um exemplo de um sistema básico de gerenciamento de dados. Sinta-se à vontade para:
 
-python gerenciador_pessoas.py
-(Substitua gerenciador_pessoas.py pelo nome do seu arquivo, se for diferente).
+Explorar o código: Entender como as funcionalidades foram implementadas.
 
-Interação: O programa será iniciado e exibirá o menu de opções. Siga as instruções no console para interagir com o sistema.
+Melhorar: Adicionar novas funcionalidades (como filtragem, ordenação, exportação para CSV), refatorar o código ou otimizar o desempenho.
 
-Estrutura do Código
-O código é estruturado de forma modular e clara, utilizando:
+Reportar problemas: Caso encontre algum bug ou comportamento inesperado.
 
-while True: Para manter o sistema rodando até que o usuário decida sair.
+📄 Licença
+Este projeto é de código aberto e está disponível sob a Licença MIT.
 
-match case: Para organizar as diferentes opções do menu de forma eficiente e legível (requer Python 3.10+).
+📧 Contato
+Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
 
-Listas de Dicionários: Os dados das pessoas são armazenados em uma lista (dados), onde cada pessoa é um dicionário contendo 'nome' e 'idade'.
+[Seu Nome/GitHub Username]
 
-Tratamento de Exceções (try-except): Para lidar com entradas inválidas do usuário, garantindo a robustez do sistema.
+[Seu Email (opcional)]
 
-Funções: Uma função dedicada (exibir_menu()) é usada para apresentar as opções, promovendo a reutilização de código.
+Observações:
+Substitua seu_arquivo.py pelo nome real do seu arquivo Python (provavelmente main.py ou gerenciador_pessoas.py).
 
-Contribuição
-Contribuições são bem-vindas! Se você tiver ideias para melhorias, novas funcionalidades ou quiser corrigir algum bug, sinta-se à vontade para:
+Preencha [Seu Nome/GitHub Username] e [Seu Email (opcional)] com suas informações.
 
-Fazer um fork (ramificação) do repositório.
+Se você quiser, pode criar um arquivo LICENSE no seu repositório com o texto completo da Licença MIT.
 
-Criar uma nova branch (ramo) para sua funcionalidade (git checkout -b minha-nova-feature).
-
-Implementar suas mudanças.
-
-Fazer um commit (git commit -m "Adiciona nova funcionalidade X").
-
-Enviar suas mudanças para o fork (git push origin minha-nova-feature).
-
-Abrir um Pull Request.
+Este README.md já inclui as últimas melhorias que discutimos, como a criação automática da pasta Dados e a estrutura de persistência.
 
 Autor
 @https://github.com/VitorToniato
