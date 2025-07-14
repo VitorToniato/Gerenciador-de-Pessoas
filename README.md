@@ -69,10 +69,6 @@ Melhorar: Adicionar novas funcionalidades (como filtragem, ordenação, exporta�
 
 Reportar problemas: Caso encontre algum bug ou comportamento inesperado.
 
-📄 Licença
-
-Este projeto é de código aberto e está disponível sob a Licença MIT.
-
 📧 Contato
 
 Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
